@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>boost-memory главная страница</title>
+	<style>
+	html {
+		line-height: 1.15;
+		-webkit-text-size-adjust: 100%;
+	}
+	body {
+		margin: 0;
+	}
+	:root {
+		--padding_f_h: 5.20vh;
+		--main_text:  #ffffff;
+	}
+</style>
+<link rel="stylesheet" type="text/css" href="assets/css/style_index.css">
+</head>
+<body>
+	<header class="main_color mr">
+		<div class="container_header">
+			<div class="project_logo mr">boost memory</div>
+
+			<div class="switch_container mr">
+				<a href="#user" class="uu" onclick="document.querySelector('.us').checked = false; active(0);">пользователь</a>
+				<label class="switch">
+					<input type="checkbox" class="us">
+					<span class="slider round"></span>
+				</label>
+				<a href="#admin" class="ua" onclick="document.querySelector('.us').checked = true; active(1)">администратор</a>
+			</div>
+
+			<div class="account_panel">
+				<a href="#registration" class="registration">Регистрация</a>
+				<a href="#authorization" class="ab"><span  class="authorization mr">ВОЙТИ</span></a>
+			</div>
+
+			<div class="menu_icon"><span></span></div>	
+		</div>
+	</header>
+	<nav class="mobile_navigation_menu mr">
+		<div class="mobile_account_panel">
+			<div class="switch_container_mobile mr">
+				<a href="#user" class="uu_mobile" onclick="active_mobile(0);">Пользователь</a>
+				<a href="#admin" class="ua_mobile" onclick="active_mobile(1)">Администратор</a>
+			</div>
+			<div class="switch_container_mobile mr">
+				<a href="#registration" class="registration_mobile">Регистрация</a>
+				<a href="#authorization" class="ab_mb"><span  class="authorization_mobile mm">ВОЙТИ</span></a>
+			</div>
+		</div>
+
+		<div class="preview_exercise">
+			<a class="exercise_link">
+				<svg class="do_link" viewBox="0 0 72 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect y="0.767334" width="71.9207" height="71.9207" rx="35.9603" fill="white"/>
+					<path d="M49.6914 37.3815L26.1537 50.971L26.1537 23.792L49.6914 37.3815Z" fill="#797979"/>
+				</svg>
+				<!-- <picture><source srcset="assets/images/ex1.webp" type="image/webp">
+					<img src="img/image.png" alt="Упражнения"></picture> -->
+				</a>
+			</div>
+			<div class="fn">boost memory - уникальные в своём роде</div>
+
+		</nav>
+		<script>
+			const menuIcon = document.querySelector('.menu_icon');
+			if (menuIcon){
+				const nav = document.querySelector('.mobile_navigation_menu');
+				menuIcon.addEventListener("click", function(e){
+					document.body.classList.toggle('_lock');
+					menuIcon.classList.toggle('_active');
+					nav.classList.toggle('_active');
+				});
+			};
+		</script>
+		<script src="assets/js/switch_user_mode.js"></script>
+	</body>
+	</html>
